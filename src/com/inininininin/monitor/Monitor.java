@@ -29,6 +29,7 @@ public class Monitor {
 				logger.info(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
+				logger.info("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
