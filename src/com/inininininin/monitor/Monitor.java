@@ -136,6 +136,35 @@ public class Monitor {
 					response.close();
 			}
 
+			
+			try {
+				url = "https://shipinh.cn/test";
+				logger.info(url);
+				request = new Request.Builder().url(url).build();
+				response = okHttpClient.newCall(request).execute();
+				logger.info("response code : " + response.code());
+				if (response.code() != 200) {
+					throw new RuntimeException("response code : " + response.code());
+				}
+				responseBody = response.body();
+				String responseBody_string = responseBody.string();
+				logger.info(responseBody_string);
+				if (responseBody_string != null && !responseBody_string.isEmpty()) {
+					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
+					Integer code = responseBody_string_JSON.getInteger("code");
+					if (code == null || code != 0) {
+						throw new RuntimeException(responseBody_string);
+					}
+				}
+			} catch (Exception e) {
+				j.send(email, url, e.getMessage());
+			} finally {
+				if (responseBody != null)
+					responseBody.close();
+				if (response != null)
+					response.close();
+			}
+			
 			Thread.sleep(10000);
 		}
 
