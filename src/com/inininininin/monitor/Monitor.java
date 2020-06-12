@@ -79,7 +79,7 @@ public class Monitor {
 				if (response != null)
 					response.close();
 			}
-
+			
 			try {
 				url = "https://yichacha.njshangka.com/test";
 				logger.info(url);
@@ -109,7 +109,7 @@ public class Monitor {
 			}
 
 			try {
-				url = "https://www.hzbsqc.cn/test";
+				url = "https://hzbsqc.cn/test";
 				logger.info(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
@@ -165,8 +165,108 @@ public class Monitor {
 					response.close();
 			}
 			
+			try {
+				url = "http://cloudhousewed.com/test";
+				logger.info(url);
+				request = new Request.Builder().url(url).build();
+				response = okHttpClient.newCall(request).execute();
+				logger.info("response code : " + response.code());
+				if (response.code() != 200) {
+					throw new RuntimeException("response code : " + response.code());
+				}
+				responseBody = response.body();
+				String responseBody_string = responseBody.string();
+				logger.info(responseBody_string);
+				if (responseBody_string != null && !responseBody_string.isEmpty()) {
+					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
+					Integer code = responseBody_string_JSON.getInteger("code");
+					if (code == null || code != 0) {
+						throw new RuntimeException(responseBody_string);
+					}
+				}
+			} catch (Exception e) {
+				j.send(email, url, e.getMessage());
+			} finally {
+				if (responseBody != null)
+					responseBody.close();
+				if (response != null)
+					response.close();
+			}
+			
+			try {
+				url = "https://ypt.njshangka.com";
+				logger.info(url);
+				request = new Request.Builder().url(url).build();
+				response = okHttpClient.newCall(request).execute();
+				logger.info("response code : " + response.code());
+				if (response.code() != 200) {
+					throw new RuntimeException("response code : " + response.code());
+				}
+			} catch (Exception e) {
+				j.send(email, url, e.getMessage());
+			} finally {
+				if (responseBody != null)
+					responseBody.close();
+				if (response != null)
+					response.close();
+			}
+			
+			
+			try {
+				url = "https://shipinh.cn";
+				logger.info(url);
+				request = new Request.Builder().url(url).build();
+				response = okHttpClient.newCall(request).execute();
+				logger.info("response code : " + response.code());
+				if (response.code() != 200) {
+					throw new RuntimeException("response code : " + response.code());
+				}
+			} catch (Exception e) {
+				j.send(email, url, e.getMessage());
+			} finally {
+				if (responseBody != null)
+					responseBody.close();
+				if (response != null)
+					response.close();
+			}
+			
+			try {
+				url = "https://hzbsqc.cn";
+				logger.info(url);
+				request = new Request.Builder().url(url).build();
+				response = okHttpClient.newCall(request).execute();
+				logger.info("response code : " + response.code());
+				if (response.code() != 200) {
+					throw new RuntimeException("response code : " + response.code());
+				}
+			} catch (Exception e) {
+				j.send(email, url, e.getMessage());
+			} finally {
+				if (responseBody != null)
+					responseBody.close();
+				if (response != null)
+					response.close();
+			}
+			
+			
+			try {
+				url = "http://cloudhousewed.com";
+				logger.info(url);
+				request = new Request.Builder().url(url).build();
+				response = okHttpClient.newCall(request).execute();
+				logger.info("response code : " + response.code());
+				if (response.code() != 200) {
+					throw new RuntimeException("response code : " + response.code());
+				}
+			} catch (Exception e) {
+				j.send(email, url, e.getMessage());
+			} finally {
+				if (responseBody != null)
+					responseBody.close();
+				if (response != null)
+					response.close();
+			}
 			Thread.sleep(10000);
 		}
-
 	}
 }
