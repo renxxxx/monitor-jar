@@ -44,7 +44,11 @@ public class Monitor {
 					}
 				}
 			} catch (Exception e) {
-				j.send(email, url, e.getMessage());
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
 			} finally {
 				if (responseBody != null)
 					responseBody.close();
@@ -72,14 +76,18 @@ public class Monitor {
 					}
 				}
 			} catch (Exception e) {
-				j.send(email, url, e.getMessage());
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
 			} finally {
 				if (responseBody != null)
 					responseBody.close();
 				if (response != null)
 					response.close();
 			}
-			
+
 			try {
 				url = "https://yichacha.njshangka.com/test";
 				logger.info(url);
@@ -100,7 +108,11 @@ public class Monitor {
 					}
 				}
 			} catch (Exception e) {
-				j.send(email, url, e.getMessage());
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
 			} finally {
 				if (responseBody != null)
 					responseBody.close();
@@ -128,7 +140,11 @@ public class Monitor {
 					}
 				}
 			} catch (Exception e) {
-				j.send(email, url, e.getMessage());
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
 			} finally {
 				if (responseBody != null)
 					responseBody.close();
@@ -136,7 +152,6 @@ public class Monitor {
 					response.close();
 			}
 
-			
 			try {
 				url = "https://shipinh.cn/test";
 				logger.info(url);
@@ -157,14 +172,18 @@ public class Monitor {
 					}
 				}
 			} catch (Exception e) {
-				j.send(email, url, e.getMessage());
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
 			} finally {
 				if (responseBody != null)
 					responseBody.close();
 				if (response != null)
 					response.close();
 			}
-			
+
 			try {
 				url = "http://cloudhousewed.com/test";
 				logger.info(url);
@@ -185,14 +204,18 @@ public class Monitor {
 					}
 				}
 			} catch (Exception e) {
-				j.send(email, url, e.getMessage());
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
 			} finally {
 				if (responseBody != null)
 					responseBody.close();
 				if (response != null)
 					response.close();
 			}
-			
+
 			try {
 				url = "https://ypt.njshangka.com";
 				logger.info(url);
@@ -203,15 +226,18 @@ public class Monitor {
 					throw new RuntimeException("response code : " + response.code());
 				}
 			} catch (Exception e) {
-				j.send(email, url, e.getMessage());
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
 			} finally {
 				if (responseBody != null)
 					responseBody.close();
 				if (response != null)
 					response.close();
 			}
-			
-			
+
 			try {
 				url = "https://shipinh.cn";
 				logger.info(url);
@@ -222,14 +248,18 @@ public class Monitor {
 					throw new RuntimeException("response code : " + response.code());
 				}
 			} catch (Exception e) {
-				j.send(email, url, e.getMessage());
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
 			} finally {
 				if (responseBody != null)
 					responseBody.close();
 				if (response != null)
 					response.close();
 			}
-			
+
 			try {
 				url = "https://hzbsqc.cn";
 				logger.info(url);
@@ -240,15 +270,18 @@ public class Monitor {
 					throw new RuntimeException("response code : " + response.code());
 				}
 			} catch (Exception e) {
-				j.send(email, url, e.getMessage());
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
 			} finally {
 				if (responseBody != null)
 					responseBody.close();
 				if (response != null)
 					response.close();
 			}
-			
-			
+
 			try {
 				url = "http://cloudhousewed.com";
 				logger.info(url);
@@ -259,7 +292,11 @@ public class Monitor {
 					throw new RuntimeException("response code : " + response.code());
 				}
 			} catch (Exception e) {
-				j.send(email, url, e.getMessage());
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
 			} finally {
 				if (responseBody != null)
 					responseBody.close();
