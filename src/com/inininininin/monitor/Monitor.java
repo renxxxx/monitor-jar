@@ -215,8 +215,41 @@ public class Monitor {
 				if (response != null)
 					response.close();
 			}
+
 			try {
 				url = "https://www.njshangka.com/dogCake/test";
+				logger.info(url);
+				request = new Request.Builder().url(url).build();
+				response = okHttpClient.newCall(request).execute();
+				logger.info("response code : " + response.code());
+				if (response.code() != 200) {
+					throw new RuntimeException("response code : " + response.code());
+				}
+				responseBody = response.body();
+				String responseBody_string = responseBody.string();
+				logger.info(responseBody_string);
+				if (responseBody_string != null && !responseBody_string.isEmpty()) {
+					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
+					Integer code = responseBody_string_JSON.getInteger("code");
+					if (code == null || code != 0) {
+						throw new RuntimeException(responseBody_string);
+					}
+				}
+			} catch (Exception e) {
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
+			} finally {
+				if (responseBody != null)
+					responseBody.close();
+				if (response != null)
+					response.close();
+			}
+
+			try {
+				url = "https://www.njshangka.com/redpack/test";
 				logger.info(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
@@ -356,6 +389,29 @@ public class Monitor {
 				if (response != null)
 					response.close();
 			}
+
+			try {
+				url = "https://www.njshangka.com/redpack/index.html";
+				logger.info(url);
+				request = new Request.Builder().url(url).build();
+				response = okHttpClient.newCall(request).execute();
+				logger.info("response code : " + response.code());
+				if (response.code() != 200) {
+					throw new RuntimeException("response code : " + response.code());
+				}
+			} catch (Exception e) {
+				try {
+					j.send(email, url, e.getMessage());
+				} catch (Exception e1) {
+					// TODO: handle exception
+				}
+			} finally {
+				if (responseBody != null)
+					responseBody.close();
+				if (response != null)
+					response.close();
+			}
+
 			Thread.sleep(10000);
 		}
 	}
