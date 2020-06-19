@@ -45,7 +45,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -77,7 +77,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -109,7 +109,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -141,7 +141,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -173,7 +173,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -205,7 +205,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -237,7 +237,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -269,7 +269,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -291,7 +291,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -313,7 +313,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -335,7 +335,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -357,7 +357,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -379,7 +379,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
@@ -401,7 +401,7 @@ public class Monitor {
 				}
 			} catch (Exception e) {
 				try {
-					j.send(email, url, e.getMessage());
+					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
 					// TODO: handle exception
 				}
