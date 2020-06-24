@@ -47,7 +47,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -79,7 +79,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -111,7 +111,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -143,7 +143,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -175,7 +175,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -207,7 +207,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -239,7 +239,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -271,7 +271,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -293,7 +293,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -315,7 +315,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -337,7 +337,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -359,7 +359,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -381,7 +381,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
@@ -403,7 +403,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					// TODO: handle exception
+					logger.info(e1.getMessage());
 				}
 			} finally {
 				if (responseBody != null)
