@@ -1,3 +1,4 @@
 #!/bin/sh
-export CLASSPATH=./jre1.8.0_201
+export JAVA_HOME=
+export PATH=$JAVA_HOME/bin:$PATH
 java -jar ./monitor.jar
