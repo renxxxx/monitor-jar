@@ -412,6 +412,27 @@ public class Monitor {
 					response.close();
 			}
 
+			try {
+				url = "https://www.njshangka.com/urban/index.html";
+				logger.info(url);
+				request = new Request.Builder().url(url).build();
+				response = okHttpClient.newCall(request).execute();
+				logger.info("response code : " + response.code());
+				if (response.code() != 200) {
+					throw new RuntimeException("response code : " + response.code());
+				}
+			} catch (Exception e) {
+				try {
+					j.send(email, "fail on " + url, e.getMessage());
+				} catch (Exception e1) {
+					logger.info(e1.getMessage());
+				}
+			} finally {
+				if (responseBody != null)
+					responseBody.close();
+				if (response != null)
+					response.close();
+			}
 			Thread.sleep(10000);
 		}
 	}
