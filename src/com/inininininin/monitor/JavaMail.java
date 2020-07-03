@@ -9,12 +9,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class JavaMail {
-	public static void main(String[] args) throws Exception {
-		JavaMail j = new JavaMail("smtp.qq.com", 25, "smtp", "true", "413038044@qq.com", "pzivczucpondbhhh",
-				"413038044@qq.com");
-
-		j.send("413038044@qq.com", "aq123123d", "qqqq");
-	}
 
 	public JavaMail(String host, Integer port, String protocol, String smtpAuth, String user, String pwd,
 			String sender) {
