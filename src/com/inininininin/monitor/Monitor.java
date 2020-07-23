@@ -1,6 +1,9 @@
 package com.inininininin.monitor;
 
+import java.io.File;
+
 import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSON;
@@ -20,6 +23,11 @@ public class Monitor {
 	static JavaMail j = new JavaMail("smtp.qq.com", 25, "smtp", "true", email, pwd, email);
 
 	public static void main(String[] args) throws Exception {
+		String path = new File("").getAbsolutePath();
+
+        FileAppender appender = (FileAppender) org.apache.log4j.Logger.getRootLogger().getAppender("rlfile");
+        logger.info(appender.getFile());
+        
 		while (true) {
 			String url = null;
 			Request request = null;
