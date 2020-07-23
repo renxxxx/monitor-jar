@@ -1,5 +1,6 @@
 package com.inininininin.monitor;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSON;
@@ -14,7 +15,7 @@ public class Monitor {
 	public static Logger logger = Logger.getLogger(Monitor.class);
 
 	static String email = "413038044@qq.com";
-	static String pwd = "pzivczucpondbhhh";
+	static String pwd = "zdaxslpmputscbda";
 	static OkHttpClient okHttpClient = new OkHttpClient();
 	static JavaMail j = new JavaMail("smtp.qq.com", 25, "smtp", "true", email, pwd, email);
 
@@ -47,7 +48,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -79,7 +80,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -111,7 +112,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -143,7 +144,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -175,7 +176,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -207,7 +208,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -239,7 +240,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -271,7 +272,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -293,7 +294,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -315,7 +316,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -337,7 +338,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -359,7 +360,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -381,7 +382,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -403,7 +404,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
@@ -425,7 +426,7 @@ public class Monitor {
 				try {
 					j.send(email, "fail on " + url, e.getMessage());
 				} catch (Exception e1) {
-					logger.info(e1.getMessage());
+					logger.info(ExceptionUtils.getStackTrace(e1));
 				}
 			} finally {
 				if (responseBody != null)
