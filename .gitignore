@@ -2,5 +2,6 @@
 /build/
 /target/
 *.log
+*.log.*
 *.class
 .svn
