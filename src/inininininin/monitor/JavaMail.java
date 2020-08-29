@@ -1,4 +1,4 @@
-package com.inininininin.monitor;
+package inininininin.monitor;
 
 import java.util.Properties;
 

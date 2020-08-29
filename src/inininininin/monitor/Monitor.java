@@ -1,4 +1,4 @@
-package com.inininininin.monitor;
+package inininininin.monitor;
 
 import java.io.File;
 
@@ -18,7 +18,7 @@ public class Monitor {
 	public static Logger logger = Logger.getLogger(Monitor.class);
 
 	static String email = "413038044@qq.com";
-	static String pwd = "zdaxslpmputscbda";
+	static String pwd = "euhiglgjaxribjch";
 	static OkHttpClient okHttpClient = new OkHttpClient();
 	static JavaMail j = new JavaMail("smtp.qq.com", 25, "smtp", "true", email, pwd, email);
 

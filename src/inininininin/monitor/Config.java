@@ -1,4 +1,4 @@
-package com.inininininin.monitor;
+package inininininin.monitor;
 
 public class Config {
 	public static String version = "1.0.0.2008181503";
