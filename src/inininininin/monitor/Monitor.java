@@ -25,9 +25,9 @@ public class Monitor {
 	public static void main(String[] args) throws Exception {
 		String path = new File("").getAbsolutePath();
 
-        FileAppender appender = (FileAppender) org.apache.log4j.Logger.getRootLogger().getAppender("rlfile");
-        logger.info(appender.getFile());
-        
+		FileAppender appender = (FileAppender) org.apache.log4j.Logger.getRootLogger().getAppender("rlfile");
+		logger.debug(appender.getFile());
+
 		while (true) {
 			String url = null;
 			Request request = null;
@@ -35,16 +35,16 @@ public class Monitor {
 			ResponseBody responseBody = null;
 			try {
 				url = "https://zaylt.njshangka.com/test";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
 				responseBody = response.body();
 				String responseBody_string = responseBody.string();
-				logger.info(responseBody_string);
+				logger.debug(responseBody_string);
 				if (responseBody_string != null && !responseBody_string.isEmpty()) {
 					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
 					Integer code = responseBody_string_JSON.getInteger("code");
@@ -67,16 +67,16 @@ public class Monitor {
 
 			try {
 				url = "https://ypt.njshangka.com/test";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
 				responseBody = response.body();
 				String responseBody_string = responseBody.string();
-				logger.info(responseBody_string);
+				logger.debug(responseBody_string);
 				if (responseBody_string != null && !responseBody_string.isEmpty()) {
 					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
 					Integer code = responseBody_string_JSON.getInteger("code");
@@ -99,16 +99,16 @@ public class Monitor {
 
 			try {
 				url = "https://yichacha.njshangka.com/test";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
 				responseBody = response.body();
 				String responseBody_string = responseBody.string();
-				logger.info(responseBody_string);
+				logger.debug(responseBody_string);
 				if (responseBody_string != null && !responseBody_string.isEmpty()) {
 					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
 					Integer code = responseBody_string_JSON.getInteger("code");
@@ -131,16 +131,16 @@ public class Monitor {
 
 			try {
 				url = "https://hzbsqc.cn/test";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
 				responseBody = response.body();
 				String responseBody_string = responseBody.string();
-				logger.info(responseBody_string);
+				logger.debug(responseBody_string);
 				if (responseBody_string != null && !responseBody_string.isEmpty()) {
 					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
 					Integer code = responseBody_string_JSON.getInteger("code");
@@ -161,19 +161,18 @@ public class Monitor {
 					response.close();
 			}
 
-
 			try {
 				url = "http://cloudhousewed.com/test";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
 				responseBody = response.body();
 				String responseBody_string = responseBody.string();
-				logger.info(responseBody_string);
+				logger.debug(responseBody_string);
 				if (responseBody_string != null && !responseBody_string.isEmpty()) {
 					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
 					Integer code = responseBody_string_JSON.getInteger("code");
@@ -196,16 +195,16 @@ public class Monitor {
 
 			try {
 				url = "https://www.njshangka.com/dogCake/test";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
 				responseBody = response.body();
 				String responseBody_string = responseBody.string();
-				logger.info(responseBody_string);
+				logger.debug(responseBody_string);
 				if (responseBody_string != null && !responseBody_string.isEmpty()) {
 					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
 					Integer code = responseBody_string_JSON.getInteger("code");
@@ -228,16 +227,16 @@ public class Monitor {
 
 			try {
 				url = "https://www.njshangka.com/redpack/test";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
 				responseBody = response.body();
 				String responseBody_string = responseBody.string();
-				logger.info(responseBody_string);
+				logger.debug(responseBody_string);
 				if (responseBody_string != null && !responseBody_string.isEmpty()) {
 					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
 					Integer code = responseBody_string_JSON.getInteger("code");
@@ -260,16 +259,16 @@ public class Monitor {
 
 			try {
 				url = "https://kefu.jfcs11.com/test";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
 				responseBody = response.body();
 				String responseBody_string = responseBody.string();
-				logger.info(responseBody_string);
+				logger.debug(responseBody_string);
 				if (responseBody_string != null && !responseBody_string.isEmpty()) {
 					JSONObject responseBody_string_JSON = JSON.parseObject(responseBody_string);
 					Integer code = responseBody_string_JSON.getInteger("code");
@@ -289,14 +288,14 @@ public class Monitor {
 				if (response != null)
 					response.close();
 			}
-			
+
 			///////////////////
 			try {
 				url = "https://ypt.njshangka.com";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
@@ -315,10 +314,10 @@ public class Monitor {
 
 			try {
 				url = "https://hzbsqc.cn";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
@@ -337,10 +336,10 @@ public class Monitor {
 
 			try {
 				url = "http://cloudhousewed.com";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
@@ -359,10 +358,10 @@ public class Monitor {
 
 			try {
 				url = "http://www.njshangka.com/dogCake/index.html";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
@@ -381,10 +380,10 @@ public class Monitor {
 
 			try {
 				url = "https://www.njshangka.com/redpack/index.html";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
@@ -403,10 +402,10 @@ public class Monitor {
 
 			try {
 				url = "https://www.njshangka.com/urban/index.html";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
@@ -422,13 +421,13 @@ public class Monitor {
 				if (response != null)
 					response.close();
 			}
-			
+
 			try {
 				url = "https://kefu.jfcs11.com";
-				logger.info(url);
+				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
-				logger.info("response code : " + response.code());
+				logger.debug("response code : " + response.code());
 				if (response.code() != 200) {
 					throw new RuntimeException("response code : " + response.code());
 				}
