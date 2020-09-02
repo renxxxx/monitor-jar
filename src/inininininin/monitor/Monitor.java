@@ -28,7 +28,6 @@ public class Monitor {
 
 		FileAppender appender = (FileAppender) org.apache.log4j.Logger.getRootLogger().getAppender("rlfile");
 		logger.debug(appender.getFile());
-
 		while (true) {
 			String url = null;
 			Request request = null;
@@ -445,7 +444,7 @@ public class Monitor {
 					response.close();
 			}
 			Thread.sleep(10000);
-			logger.info("return");
 		}
+		//logger.info("return");
 	}
 }
