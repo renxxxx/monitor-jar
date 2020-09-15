@@ -23,7 +23,7 @@ public class Monitor {
 	static JavaxMail j = new JavaxMail("smtp.qq.com", 25, "smtp", "true", email, pwd, email);
 
 	public static void main(String[] args) throws Exception {
-		// logger.debug("enter");
+		logger.info("enter");
 		String path = new File("").getAbsolutePath();
 
 		FileAppender appender = (FileAppender) org.apache.log4j.Logger.getRootLogger().getAppender("rlfile");
@@ -501,6 +501,6 @@ public class Monitor {
 			Thread.sleep(10000);
 			// logger.debug("return while (true)");
 		}
-		// logger.debug("return");
+		// logger.info("return");
 	}
 }
