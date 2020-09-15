@@ -8,9 +8,9 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-public class JavaMail {
+public class JavaxMail {
 
-	public JavaMail(String host, Integer port, String protocol, String smtpAuth, String user, String pwd,
+	public JavaxMail(String host, Integer port, String protocol, String smtpAuth, String user, String pwd,
 			String sender) {
 		super();
 		this.host = host;
