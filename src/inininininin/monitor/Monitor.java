@@ -67,7 +67,7 @@ public class Monitor {
 			}
 
 			try {
-				url = "https://zaylt.njshangka.com/test";
+				url = "https://zaylt.njshangka.com/ylt/test";
 				logger.debug(url);
 				request = new Request.Builder().url(url).build();
 				response = okHttpClient.newCall(request).execute();
