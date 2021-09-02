@@ -46,7 +46,9 @@ date=`date +%y%m%d`
 commitid=`git rev-parse --short HEAD`
 packagename=$group-$project-jar-$date-$commitid
 echo $packagename
-./zip -q -r ./target/$packagename.zip ./run/*
+cd ./run
+../zip -q -r ../target/$packagename.zip ./*
+cd ../
 
 rm -rf ./run/lib
 rm -rf ./run/*.jar
