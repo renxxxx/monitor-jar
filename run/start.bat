@@ -1,4 +1,3 @@
 @echo off 
 title %~n0
-set CLASSPATH=.\jre1.8.0_201;
-java -jar ./main.jar
+java -classpath "./jre1.8.0_201"  -jar ./main.jar

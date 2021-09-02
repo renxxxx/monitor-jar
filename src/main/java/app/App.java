@@ -1,9 +1,6 @@
 package app;
 
-import java.io.File;
-
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSON;
@@ -24,7 +21,7 @@ public class App {
 	static OkHttpClient okHttpClient = new OkHttpClient();
 
 	public static void main(String[] args) throws Exception {
-		logger.info("enter");
+		logger.info("in");
 		j = new JMail();
 		j.host = "smtp.qq.com";
 		j.user = "413038044@qq.com";
