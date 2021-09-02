@@ -19,6 +19,7 @@
 						<!--生成的jar中，不要包含pom.xml和pom.properties这两个文件 -->
 						<addMavenDescriptor>false</addMavenDescriptor>
 						<manifest>
+							<mainClass>renx.monitor.Monitor</mainClass>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
 						</manifest>
