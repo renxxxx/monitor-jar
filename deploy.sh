@@ -36,7 +36,7 @@ echo
 rm -rf ./run/lib
 rm -rf ./run/*.jar
 
-cp ./target/lib ./run
+cp -r ./target/lib ./run
 cp ./target/*.jar ./run
 cp ./target/*.jar ./run/main.jar
 
