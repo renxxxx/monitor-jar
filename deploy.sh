@@ -41,7 +41,7 @@ rm -rf ./run/lib
 rm -rf ./run/*.jar
 cp -r ./target/lib ./run
 cp ./target/*.jar ./run/main.jar
-cp ./run ./target
+cp -r ./run ./target
 rm -rf ./run/lib
 rm -rf ./run/*.jar
 
