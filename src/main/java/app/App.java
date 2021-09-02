@@ -31,11 +31,6 @@ public class App {
 		j.pwd = "euhiglgjaxribjch";
 		j.sender = "413038044@qq.com";
 
-		String path = new File("").getAbsolutePath();
-
-		FileAppender appender = (FileAppender) org.apache.log4j.Logger.getRootLogger().getAppender("rlfile");
-		logger.info(System.getProperties());
-
 		while (true) {
 			renx_urban_web();
 			za_home();
