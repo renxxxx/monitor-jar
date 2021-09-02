@@ -1,6 +1,6 @@
 #!/bin/bash
-group="renx"
-project="monitor"
+group=renx
+project=monitor
 
 versionMsg=$1
 if [ -z "$versionMsg" ]; then
@@ -45,7 +45,8 @@ cp ./target/*.jar ./run/main.jar
 date=`date +%y%m%d`
 commitid=`git rev-parse --short HEAD`
 packagename=$group-$project-jar-$date-$commitid
-./zip -q -r ./target/$packageName.zip ./run/*
+echo $packagename
+./zip -q -r ./target/$packagename.zip ./run/*
 
 rm -rf ./run/lib
 rm -rf ./run/*.jar
