@@ -1,6 +1,7 @@
 #!/bin/bash
 group=renx
 project=monitor
+selfPath=`pwd`
 
 versionMsg=$1
 if [ -z "$versionMsg" ]; then
@@ -38,19 +39,19 @@ echo
 rm -rf ./run/*.log
 rm -rf ./run/lib
 rm -rf ./run/*.jar
-
 cp -r ./target/lib ./run
 cp ./target/*.jar ./run/main.jar
+cp ./run ./target
+rm -rf ./run/lib
+rm -rf ./run/*.jar
 
 date=`date +%y%m%d`
 commitid=`git rev-parse --short HEAD`
 packagename=$group-$project-jar-$date-$commitid
 echo $packagename
-cd ./run
-../zip -q -r ../target/$packagename.zip ./*
-cd ../
 
-rm -rf ./run/lib
-rm -rf ./run/*.jar
+cd $selfPath/target/run
+$selfPath/zip -q -r $selfPath/target/$packagename.zip ./*
+cd $selfPath
 
 echo success
