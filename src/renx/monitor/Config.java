@@ -1,4 +1,4 @@
-package inininininin.monitor;
+package renx.monitor;
 
 public class Config {
 	public static String version = "1.0.2008181503";
