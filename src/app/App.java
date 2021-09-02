@@ -1,4 +1,4 @@
-package renx.monitor;
+package app;
 
 import java.io.File;
 
@@ -14,8 +14,8 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
-public class Monitor {
-	public static Logger logger = Logger.getLogger(Monitor.class);
+public class App {
+	public static Logger logger = Logger.getLogger(App.class);
 	public static String version = "210902";
 	public static JMail j = null;
 

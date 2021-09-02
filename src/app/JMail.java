@@ -1,4 +1,4 @@
-package renx.monitor;
+package app;
 
 import java.util.Properties;
 
