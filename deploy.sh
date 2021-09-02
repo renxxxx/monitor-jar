@@ -33,11 +33,11 @@ echo "-mvn -q clean install"
 mvn -q clean install
 echo
 
-rm -rf ./target/lib
+rm -rf ./run/lib
 rm -rf ./run/*.jar
 
 cp ./target/lib ./run
-cp *.jar ./run
-cp *.jar ./run/main.jar
+cp ./target/*.jar ./run
+cp ./target/*.jar ./run/main.jar
 
 echo success
