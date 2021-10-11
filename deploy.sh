@@ -49,7 +49,7 @@ packagename=$group-$project-jar-$date-$commitid
 echo $packagename
 
 cd $workingDirectory/target/run
-$workingDirectory/zip -q -r $projectRoot/target/$packagename.zip ./*
+$workingDirectory/zip -q -r $workingDirectory/target/$packagename.zip ./*
 cd $workingDirectory
 
 echo success
