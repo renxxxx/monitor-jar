@@ -1,7 +1,7 @@
 #!/bin/bash
 group=renx
 project=monitor
-selfPath=`pwd`
+workingDirectory=`pwd`
 
 versionMsg=$1
 if [ -z "$versionMsg" ]; then
@@ -36,22 +36,20 @@ echo "-mvn -q clean install"
 mvn -q clean install
 echo
 
-rm -rf ./run/*.log
-rm -rf ./run/lib
-rm -rf ./run/*.jar
-cp -r ./target/lib ./run
-cp ./target/*.jar ./run/main.jar
+#rm -rf ./run/*.log
+#rm -rf ./run/lib
+#rm -rf ./run/*.jar
 cp -r ./run ./target
-rm -rf ./run/lib
-rm -rf ./run/*.jar
+cp -r ./target/lib ./target/run
+cp ./target/*.jar ./target/run/main.jar
 
 date=`date +%y%m%d`
 commitid=`git rev-parse --short HEAD`
 packagename=$group-$project-jar-$date-$commitid
 echo $packagename
 
-cd $selfPath/target/run
-$selfPath/zip -q -r $selfPath/target/$packagename.zip ./*
-cd $selfPath
+cd $workingDirectory/target/run
+$workingDirectory/zip -q -r $projectRoot/target/$packagename.zip ./*
+cd $workingDirectory
 
 echo success
