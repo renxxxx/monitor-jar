@@ -36,9 +36,6 @@ echo "-mvn -q clean install"
 mvn -q clean install
 echo
 
-#rm -rf ./run/*.log
-#rm -rf ./run/lib
-#rm -rf ./run/*.jar
 cp -r ./run ./target
 cp -r ./target/lib ./target/run
 cp ./target/*.jar ./target/run/main.jar
